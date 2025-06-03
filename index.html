@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral AI - Transform Your World with AI-Powered Flower Art</title>
-    <meta name="description" content="Create stunning, personalized flower arrangements and botanical art using advanced AI technology. Download Floral AI for iOS.">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Floral AI - AI-Powered Flower Art Generator">
-    <meta property="og:description" content="Transform your ideas into beautiful flower arrangements and botanical art with AI">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jerv.github.io/floral-ai-website">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Floral AI - AI Flower Arrangement Creator</title>
+    <meta name="description" content="Create beautiful flower arrangements with AI. Download for iPhone.">
     
     <style>
         * {
@@ -23,294 +14,703 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: #1E293B;
+            background: #FFFFFF;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
         /* Header */
         header {
-            padding: 1rem 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-bottom: 1px solid #E2E8F0;
+            padding: 20px 0;
         }
         
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        .nav-links {
             display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #E91E63;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
         }
         
-        .nav-links a:hover {
-            color: #667eea;
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: url('app-icon.png') center/cover;
+            border-radius: 10px;
         }
         
-        /* Hero Section */
+        .header-download {
+            display: none;
+        }
+        
+        /* Hero */
         .hero {
-            padding: 120px 0 80px;
-            text-align: center;
+            padding: 120px 0;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.jpg') center/cover;
             color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+        }
+        
+        .hero-text {
+            text-align: center;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: white;
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
         
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        .hero-download img {
+            height: 60px;
         }
         
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        .hero-phone {
+            position: relative;
+            width: 280px;
+            height: 560px;
+            background: #000000;
+            border-radius: 25px;
+            padding: 8px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            margin: 0;
         }
         
-        /* Features Section */
-        .features {
+        .hero-phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #f8fafc;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+        
+        .slideshow-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .dot.active {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* App Process Section */
+        .app-process {
             padding: 80px 0;
             background: white;
         }
         
-        .features h2 {
+        .process-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1E293B;
         }
         
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .process-steps {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
-        .feature-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
+        .process-step {
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 240px;
+            position: relative;
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        /* App Preview */
-        .app-preview {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #E91E63;
             color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+            margin: 0 auto 20px auto;
+        }
+        
+        .step-phone {
+            width: 180px;
+            height: 360px;
+            background: #000000;
+            border-radius: 22px;
+            padding: 6px;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .step-screen {
+            width: 100%;
+            height: 100%;
+            background: #f8fafc;
+            border-radius: 17px;
+            overflow: hidden;
+        }
+        
+        .step-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 17px;
+        }
+        
+        .step-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1E293B;
+        }
+        
+        .step-description {
+            color: #64748B;
+            font-size: 16px;
+        }
+        
+        /* Pricing Table */
+        .pricing-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .pricing-title {
             text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1E293B;
         }
         
-        .app-preview h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+        .pricing-table {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
-        .app-preview p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .pricing-headers {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding: 16px 0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .pricing-header.regular { color: #64748b; }
+        .pricing-header.premium { color: #E91E63; }
+        .pricing-header.pro { color: #7c3aed; }
+        
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #f1f5f9;
+            align-items: center;
+        }
+        
+        .pricing-label {
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .pricing-size {
+            font-size: 12px;
+            color: #64748b;
+        }
+        
+        .pricing-value {
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .pricing-value.regular { color: #64748b; }
+        .pricing-value.premium { color: #E91E63; }
+        .pricing-value.pro { color: #7c3aed; }
+        
+        /* Subscription Plans */
+        .plans-section {
+            padding: 0 0 80px 0;
+            background: white;
+        }
+        
+        .plans-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1E293B;
+        }
+        
+        .plans-container {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .plan-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 32px 24px;
+            width: 320px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .plan-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .plan-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .plan-icon.premium { 
+            background: #E91E63;
+        }
+        
+        .plan-icon.pro { 
+            background: #7c3aed;
+        }
+        
+        .plan-content {
+            flex: 1;
+        }
+        
+        .plan-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+        
+        .plan-pricing {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+        
+        .plan-price {
+            font-size: 36px;
+            font-weight: 800;
+        }
+        
+        .plan-price.premium { color: #E91E63; }
+        .plan-price.pro { color: #7c3aed; }
+        
+        .plan-period {
+            font-size: 18px;
+            color: #64748b;
+        }
+        
+        .plan-billing {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        
+        .plan-savings {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .plan-savings.premium { color: #E91E63; }
+        .plan-savings.pro { color: #7c3aed; }
+        
+        .plan-features {
+            list-style: none;
+        }
+        
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 15px;
+            color: #475569;
+        }
+        
+        .feature-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .feature-check.premium { background: #E91E63; }
+        .feature-check.pro { background: #7c3aed; }
+        
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: white;
+            color: #1E293B;
+            text-align: center;
+            border-top: 1px solid #E2E8F0;
+        }
+        
+        .cta-app-icon {
+            width: 120px;
+            height: 120px;
+            background: url('app-icon.png') center/cover;
+            border-radius: 24px;
+            margin: 0 auto 32px auto;
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.3);
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1E293B;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            color: #64748B;
+        }
+        
+        .app-store-btn img {
+            height: 60px;
         }
         
         /* Footer */
         footer {
-            background: #333;
-            color: white;
             padding: 40px 0;
+            background: #1E293B;
+            color: white;
             text-align: center;
         }
         
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links a {
-            color: #ccc;
+        footer a {
+            color: #94A3B8;
             text-decoration: none;
-            margin: 0 1rem;
-            transition: color 0.3s ease;
+            margin: 0 16px;
         }
         
-        .footer-links a:hover {
+        footer a:hover {
             color: white;
         }
         
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 36px;
             }
             
-            .hero p {
-                font-size: 1.1rem;
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
             }
             
-            .nav-links {
-                display: none;
+            .pricing-headers,
+            .pricing-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                text-align: left;
             }
             
-            .features h2, .app-preview h2 {
-                font-size: 2rem;
+            .pricing-value {
+                text-align: left;
+            }
+            
+            .plans-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="container">
-            <a href="#" class="logo">🌸 Floral AI</a>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <div class="logo-icon"></div>
+                    Floral AI
+                </a>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Transform Your World with AI-Powered Flower Art</h1>
-                <p>Create stunning, personalized flower arrangements and botanical masterpieces using cutting-edge artificial intelligence technology.</p>
-                <a href="#download" class="cta-button">Download for iOS</a>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Why Choose Floral AI?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎨</div>
-                        <h3>AI-Powered Creativity</h3>
-                        <p>Advanced DALL-E 3 integration creates unique, beautiful flower arrangements from your descriptions and ideas.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🌺</div>
-                        <h3>Endless Possibilities</h3>
-                        <p>Generate unlimited variations of botanical art, from realistic bouquets to abstract floral designs.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>Native iOS Experience</h3>
-                        <p>Beautifully designed app optimized for iPhone with intuitive controls and seamless performance.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Privacy First</h3>
-                        <p>Your creations are private by default. Full GDPR compliance and transparent data practices.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Lightning Fast</h3>
-                        <p>Generate high-quality images in seconds with our optimized AI pipeline and efficient processing.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💎</div>
-                        <h3>Premium Quality</h3>
-                        <p>Professional-grade results suitable for personal use, gifts, or commercial projects.</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>AI-Powered Flower Arrangements</h1>
+                        <p>Create beautiful arrangements without manually typing prompts or dealing with complex AI tools</p>
+                        <a href="#download" class="hero-download">
+                            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="download" class="app-preview">
+        <section class="app-process">
             <div class="container">
-                <h2>Ready to Create Beautiful Flower Art?</h2>
-                <p>Join thousands of users who are already creating stunning botanical masterpieces with Floral AI. Available now on the App Store.</p>
-                <a href="#" class="cta-button">Download from App Store</a>
+                <h2 class="process-title">How It Works</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-phone">
+                            <div class="step-screen">
+                                <img src="screenshots/create.png" alt="Choose flowers screen">
+                            </div>
+                        </div>
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Choose Flowers</h3>
+                        <p class="step-description">Create and design arrangements fast & easy</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-phone">
+                            <div class="step-screen">
+                                <img src="screenshots/result.png" alt="Generated arrangement result">
+                            </div>
+                        </div>
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">View Result</h3>
+                        <p class="step-description">Get beautiful arrangement images</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-phone">
+                            <div class="step-screen">
+                                <img src="screenshots/arrangements.png" alt="Saved arrangements gallery">
+                            </div>
+                        </div>
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Save & Share</h3>
+                        <p class="step-description">Browse and share your creations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <div class="container">
+                <h2 class="pricing-title">Pricing & Features</h2>
+                
+                <div class="pricing-table">
+                    <div class="pricing-headers">
+                        <div></div>
+                        <div class="pricing-header regular">Regular</div>
+                        <div class="pricing-header premium">Premium</div>
+                        <div class="pricing-header pro">Pro</div>
+                    </div>
+                    
+                    <div class="pricing-row">
+                        <div>
+                            <div class="pricing-label">Square</div>
+                            <div class="pricing-size">(1024×1024)</div>
+                        </div>
+                        <div class="pricing-value regular">$0.20</div>
+                        <div class="pricing-value premium">$0.14</div>
+                        <div class="pricing-value pro">$0.12</div>
+                    </div>
+                    
+                    <div class="pricing-row">
+                        <div>
+                            <div class="pricing-label">Landscape</div>
+                            <div class="pricing-size">(1792×1024)</div>
+                        </div>
+                        <div class="pricing-value regular">$0.20</div>
+                        <div class="pricing-value premium">$0.14</div>
+                        <div class="pricing-value pro">$0.12</div>
+                    </div>
+                    
+                    <div class="pricing-row">
+                        <div>
+                            <div class="pricing-label">Portrait</div>
+                            <div class="pricing-size">(1024×1792)</div>
+                        </div>
+                        <div class="pricing-value regular">$0.20</div>
+                        <div class="pricing-value premium">$0.14</div>
+                        <div class="pricing-value pro">$0.12</div>
+                    </div>
+                    
+                    <div class="pricing-row">
+                        <div class="pricing-label">Use Your Own API Key</div>
+                        <div class="pricing-value regular">✗</div>
+                        <div class="pricing-value premium">✗</div>
+                        <div class="pricing-value pro">✓</div>
+                    </div>
+                    
+                    <div class="pricing-row">
+                        <div class="pricing-label">View Arrangement Prompts</div>
+                        <div class="pricing-value regular">✗</div>
+                        <div class="pricing-value premium">✗</div>
+                        <div class="pricing-value pro">✓</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="cta">
+            <div class="container">
+                <div class="cta-app-icon"></div>
+                <h2>Download Floral AI</h2>
+                <p>Available now for iPhone</p>
+                
+                <a href="https://apps.apple.com/app/floral-ai">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="support.html">Support</a>
-                <a href="mailto:support@floralai.app">Contact</a>
-            </div>
-            <p>&copy; 2025 Floral AI. All rights reserved.</p>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <p style="margin-top: 20px; color: #64748B;">&copy; 2024 Floral AI</p>
         </div>
     </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].classList.add("active");
+        }
+
+        // Auto-advance slides every 4 seconds
+        setInterval(function() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }, 4000);
+    </script>
 </body>
 </html> 
