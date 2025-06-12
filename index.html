@@ -240,133 +240,6 @@
             font-size: 14px;
         }
         
-        /* Simple Pricing Section */
-        .pricing-section {
-            padding: 80px 0;
-            background: #F8FAFC;
-        }
-        
-        .pricing-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1E293B;
-        }
-        
-        .pricing-subtitle {
-            text-align: center;
-            font-size: 18px;
-            color: #64748B;
-            margin-bottom: 60px;
-        }
-        
-        .pricing-card {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .pricing-icon {
-            width: 60px;
-            height: 60px;
-            background: #E91E63;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px auto;
-            font-size: 24px;
-            color: white;
-        }
-        
-        .pricing-main {
-            font-size: 48px;
-            font-weight: 800;
-            color: #E91E63;
-            margin-bottom: 8px;
-        }
-        
-        .pricing-description {
-            font-size: 18px;
-            color: #64748B;
-            margin-bottom: 32px;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-        
-        .pricing-features li {
-            padding: 12px 0;
-            border-bottom: 1px solid #F1F5F9;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .feature-check {
-            width: 20px;
-            height: 20px;
-            background: #10B981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        
-        .balance-packages {
-            background: #F8FAFC;
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 32px;
-        }
-        
-        .balance-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #1E293B;
-            text-align: center;
-        }
-        
-        .balance-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 12px;
-        }
-        
-        .balance-item {
-            background: white;
-            border-radius: 8px;
-            padding: 12px 8px;
-            text-align: center;
-            border: 2px solid #E2E8F0;
-        }
-        
-        .balance-amount {
-            font-size: 16px;
-            font-weight: 700;
-            color: #E91E63;
-        }
-        
-        .balance-price {
-            font-size: 12px;
-            color: #64748B;
-        }
-        
         /* CTA Section */
         .cta {
             padding: 80px 0;
@@ -436,15 +309,6 @@
                 align-items: center;
                 gap: 40px;
             }
-            
-            .pricing-card {
-                margin: 0 20px;
-                padding: 30px 20px;
-            }
-            
-            .balance-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
     </style>
 </head>
@@ -467,7 +331,7 @@
                     <div class="hero-text">
                         <h1>AI-Powered Flower Arrangements</h1>
                         <p>Create beautiful arrangements without manually typing prompts or dealing with complex AI tools</p>
-                        <a href="#download" class="hero-download">
+                        <a href="https://apps.apple.com/app/floral-ai" class="hero-download">
                             <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
                         </a>
                     </div>
@@ -510,68 +374,6 @@
                         <div class="step-number">3</div>
                         <h3 class="step-title">Save Arrangements</h3>
                         <p class="step-description">Reuse and manage your arrangements</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="pricing-section">
-            <div class="container">
-                <h2 class="pricing-title">Simple, Fair Pricing</h2>
-                <p class="pricing-subtitle">One price for everyone. No subscriptions, no tiers.</p>
-                
-                <div class="pricing-card">
-                    <div class="pricing-icon">🌸</div>
-                    <div class="pricing-main">$0.20</div>
-                    <p class="pricing-description">per image generation</p>
-                    
-                    <ul class="pricing-features">
-                        <li>
-                            <span class="feature-check">✓</span>
-                            High-quality AI-generated arrangements
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            All image sizes (Square, Portrait, Landscape)
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            Save and organize your creations
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            3 free images to get started
-                        </li>
-                        <li>
-                            <span class="feature-check">✓</span>
-                            No monthly fees or subscriptions
-                        </li>
-                    </ul>
-                    
-                    <div class="balance-packages">
-                        <h3 class="balance-title">Credit Packages</h3>
-                        <div class="balance-grid">
-                            <div class="balance-item">
-                                <div class="balance-amount">$5</div>
-                                <div class="balance-price">25 images</div>
-                            </div>
-                            <div class="balance-item">
-                                <div class="balance-amount">$10</div>
-                                <div class="balance-price">50 images</div>
-                            </div>
-                            <div class="balance-item">
-                                <div class="balance-amount">$20</div>
-                                <div class="balance-price">100 images</div>
-                            </div>
-                            <div class="balance-item">
-                                <div class="balance-amount">$50</div>
-                                <div class="balance-price">250 images</div>
-                            </div>
-                            <div class="balance-item">
-                                <div class="balance-amount">$100</div>
-                                <div class="balance-price">500 images</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
