@@ -199,27 +199,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
             font-weight: 700;
-            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
             margin: 0 auto 20px auto;
         }
         
         .step-phone {
-            width: 180px;
-            height: 360px;
+            width: 120px;
+            height: 240px;
             background: #000000;
-            border-radius: 22px;
-            padding: 6px;
+            border-radius: 15px;
+            padding: 4px;
             margin: 0 auto 20px auto;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
         .step-screen {
             width: 100%;
             height: 100%;
             background: #f8fafc;
-            border-radius: 17px;
+            border-radius: 12px;
             overflow: hidden;
         }
         
@@ -227,11 +225,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 17px;
+            border-radius: 12px;
         }
         
         .step-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             margin-bottom: 12px;
             color: #1E293B;
@@ -239,250 +237,172 @@
         
         .step-description {
             color: #64748B;
-            font-size: 16px;
+            font-size: 14px;
         }
         
-        /* Pricing Table */
+        /* Simple Pricing Section */
         .pricing-section {
             padding: 80px 0;
-            background: #f8fafc;
+            background: #F8FAFC;
         }
         
         .pricing-title {
             text-align: center;
             font-size: 36px;
             font-weight: 700;
-            margin-bottom: 40px;
-            color: #1E293B;
-        }
-        
-        .pricing-table {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 60px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .pricing-headers {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 16px;
             margin-bottom: 20px;
-            padding: 16px 0;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        
-        .pricing-header {
-            text-align: center;
-            font-weight: 700;
-            font-size: 16px;
-        }
-        
-        .pricing-header.regular { color: #64748b; }
-        .pricing-header.premium { color: #E91E63; }
-        .pricing-header.pro { color: #7c3aed; }
-        
-        .pricing-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 16px;
-            padding: 16px 0;
-            border-bottom: 1px solid #f1f5f9;
-            align-items: center;
-        }
-        
-        .pricing-label {
-            font-weight: 600;
-            color: #1e293b;
-        }
-        
-        .pricing-size {
-            font-size: 12px;
-            color: #64748b;
-        }
-        
-        .pricing-value {
-            text-align: center;
-            font-weight: 600;
-        }
-        
-        .pricing-value.regular { color: #64748b; }
-        .pricing-value.premium { color: #E91E63; }
-        .pricing-value.pro { color: #7c3aed; }
-        
-        /* Subscription Plans */
-        .plans-section {
-            padding: 0 0 80px 0;
-            background: white;
-        }
-        
-        .plans-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 40px;
             color: #1E293B;
         }
         
-        .plans-container {
-            display: flex;
-            gap: 32px;
-            justify-content: center;
-            flex-wrap: wrap;
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #64748B;
+            margin-bottom: 60px;
         }
         
-        .plan-card {
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
             background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 32px 24px;
-            width: 320px;
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .plan-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-        
-        .plan-icon {
-            width: 40px;
-            height: 40px;
             border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .pricing-icon {
+            width: 60px;
+            height: 60px;
+            background: #E91E63;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto 24px auto;
             font-size: 24px;
-            font-weight: bold;
             color: white;
-            flex-shrink: 0;
         }
         
-        .plan-icon.premium { 
-            background: #E91E63;
-        }
-        
-        .plan-icon.pro { 
-            background: #7c3aed;
-        }
-        
-        .plan-content {
-            flex: 1;
-        }
-        
-        .plan-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #1e293b;
-        }
-        
-        .plan-pricing {
-            display: flex;
-            align-items: baseline;
-            gap: 4px;
-            margin-bottom: 4px;
-        }
-        
-        .plan-price {
-            font-size: 36px;
+        .pricing-main {
+            font-size: 48px;
             font-weight: 800;
-        }
-        
-        .plan-price.premium { color: #E91E63; }
-        .plan-price.pro { color: #7c3aed; }
-        
-        .plan-period {
-            font-size: 18px;
-            color: #64748b;
-        }
-        
-        .plan-billing {
-            font-size: 14px;
-            color: #64748b;
+            color: #E91E63;
             margin-bottom: 8px;
         }
         
-        .plan-savings {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 24px;
+        .pricing-description {
+            font-size: 18px;
+            color: #64748B;
+            margin-bottom: 32px;
         }
         
-        .plan-savings.premium { color: #E91E63; }
-        .plan-savings.pro { color: #7c3aed; }
-        
-        .plan-features {
+        .pricing-features {
             list-style: none;
+            margin-bottom: 32px;
         }
         
-        .plan-features li {
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #F1F5F9;
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 8px 0;
-            font-size: 15px;
-            color: #475569;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
         }
         
         .feature-check {
             width: 20px;
             height: 20px;
-            border-radius: 10px;
+            background: #10B981;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
             color: white;
+            font-size: 12px;
             font-weight: bold;
         }
         
-        .feature-check.premium { background: #E91E63; }
-        .feature-check.pro { background: #7c3aed; }
+        .balance-packages {
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
         
-        /* CTA */
-        .cta {
-            padding: 80px 0;
-            background: white;
+        .balance-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
             color: #1E293B;
             text-align: center;
-            border-top: 1px solid #E2E8F0;
+        }
+        
+        .balance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 12px;
+        }
+        
+        .balance-item {
+            background: white;
+            border-radius: 8px;
+            padding: 12px 8px;
+            text-align: center;
+            border: 2px solid #E2E8F0;
+        }
+        
+        .balance-amount {
+            font-size: 16px;
+            font-weight: 700;
+            color: #E91E63;
+        }
+        
+        .balance-price {
+            font-size: 12px;
+            color: #64748B;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: #1E293B;
+            color: white;
+            text-align: center;
         }
         
         .cta-app-icon {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             background: url('app-icon.png') center/cover;
-            border-radius: 24px;
-            margin: 0 auto 32px auto;
-            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.3);
+            border-radius: 20px;
+            margin: 0 auto 24px auto;
         }
         
         .cta h2 {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #1E293B;
+            margin-bottom: 16px;
         }
         
         .cta p {
             font-size: 18px;
+            color: #94A3B8;
             margin-bottom: 32px;
-            color: #64748B;
         }
         
-        .app-store-btn img {
+        .cta img {
             height: 60px;
         }
         
         /* Footer */
         footer {
             padding: 40px 0;
-            background: #1E293B;
+            background: #0F172A;
             color: white;
             text-align: center;
         }
@@ -499,14 +419,16 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 40px;
-            }
-            
             .hero h1 {
                 font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-content {
+                flex-direction: column;
             }
             
             .process-steps {
@@ -515,20 +437,13 @@
                 gap: 40px;
             }
             
-            .pricing-headers,
-            .pricing-row {
-                grid-template-columns: 1fr;
-                gap: 8px;
-                text-align: left;
+            .pricing-card {
+                margin: 0 20px;
+                padding: 30px 20px;
             }
             
-            .pricing-value {
-                text-align: left;
-            }
-            
-            .plans-container {
-                flex-direction: column;
-                align-items: center;
+            .balance-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -594,7 +509,7 @@
                         </div>
                         <div class="step-number">3</div>
                         <h3 class="step-title">Save Arrangements</h3>
-                        <p class="step-description">Resuse and manage your arrangements</p>
+                        <p class="step-description">Reuse and manage your arrangements</p>
                     </div>
                 </div>
             </div>
@@ -602,58 +517,61 @@
 
         <section class="pricing-section">
             <div class="container">
-                <h2 class="pricing-title">Pricing & Features</h2>
+                <h2 class="pricing-title">Simple, Fair Pricing</h2>
+                <p class="pricing-subtitle">One price for everyone. No subscriptions, no tiers.</p>
                 
-                <div class="pricing-table">
-                    <div class="pricing-headers">
-                        <div></div>
-                        <div class="pricing-header regular">Regular</div>
-                        <div class="pricing-header premium">Premium</div>
-                        <div class="pricing-header pro">Pro</div>
-                    </div>
+                <div class="pricing-card">
+                    <div class="pricing-icon">🌸</div>
+                    <div class="pricing-main">$0.20</div>
+                    <p class="pricing-description">per image generation</p>
                     
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-label">Square</div>
-                            <div class="pricing-size">(1024×1024)</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="feature-check">✓</span>
+                            High-quality AI-generated arrangements
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            All image sizes (Square, Portrait, Landscape)
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            Save and organize your creations
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            3 free images to get started
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            No monthly fees or subscriptions
+                        </li>
+                    </ul>
+                    
+                    <div class="balance-packages">
+                        <h3 class="balance-title">Credit Packages</h3>
+                        <div class="balance-grid">
+                            <div class="balance-item">
+                                <div class="balance-amount">$5</div>
+                                <div class="balance-price">25 images</div>
+                            </div>
+                            <div class="balance-item">
+                                <div class="balance-amount">$10</div>
+                                <div class="balance-price">50 images</div>
+                            </div>
+                            <div class="balance-item">
+                                <div class="balance-amount">$20</div>
+                                <div class="balance-price">100 images</div>
+                            </div>
+                            <div class="balance-item">
+                                <div class="balance-amount">$50</div>
+                                <div class="balance-price">250 images</div>
+                            </div>
+                            <div class="balance-item">
+                                <div class="balance-amount">$100</div>
+                                <div class="balance-price">500 images</div>
+                            </div>
                         </div>
-                        <div class="pricing-value regular">$0.20</div>
-                        <div class="pricing-value premium">$0.14</div>
-                        <div class="pricing-value pro">$0.12</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-label">Landscape</div>
-                            <div class="pricing-size">(1792×1024)</div>
-                        </div>
-                        <div class="pricing-value regular">$0.20</div>
-                        <div class="pricing-value premium">$0.14</div>
-                        <div class="pricing-value pro">$0.12</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-label">Portrait</div>
-                            <div class="pricing-size">(1024×1792)</div>
-                        </div>
-                        <div class="pricing-value regular">$0.20</div>
-                        <div class="pricing-value premium">$0.14</div>
-                        <div class="pricing-value pro">$0.12</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div class="pricing-label">Use Your Own API Key</div>
-                        <div class="pricing-value regular">✗</div>
-                        <div class="pricing-value premium">✗</div>
-                        <div class="pricing-value pro">✓</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div class="pricing-label">View Arrangement Prompts</div>
-                        <div class="pricing-value regular">✗</div>
-                        <div class="pricing-value premium">✗</div>
-                        <div class="pricing-value pro">✓</div>
                     </div>
                 </div>
             </div>
