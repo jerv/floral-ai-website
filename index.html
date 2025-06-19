@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floral AI - AI Flower Arrangement Creator</title>
     <meta name="description" content="Create beautiful flower arrangements with AI. Download for iPhone.">
+    <link rel="icon" type="image/png" href="app-icon.png">
     
     <style>
         * {
@@ -16,7 +17,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             line-height: 1.6;
-            color: #1E293B;
+            color: #374151;
             background: #FFFFFF;
         }
         
@@ -26,226 +27,17 @@
             padding: 0 20px;
         }
         
-        /* Header */
-        header {
-            background: white;
-            border-bottom: 1px solid #E2E8F0;
-            padding: 20px 0;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #E91E63;
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: url('app-icon.png') center/cover;
-            border-radius: 10px;
-        }
-        
-        .header-download {
-            display: none;
-        }
-        
-        /* Hero */
-        .hero {
-            padding: 120px 0;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero.jpg') center/cover;
-            color: white;
-            text-align: center;
-        }
-        
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 40px;
-        }
-        
-        .hero-text {
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 24px;
-            color: white;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        
-        .hero-download img {
-            height: 60px;
-        }
-        
-        .hero-phone {
-            position: relative;
-            width: 280px;
-            height: 560px;
-            background: #000000;
-            border-radius: 25px;
-            padding: 8px;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
-            margin: 0;
-        }
-        
-        .hero-phone-screen {
-            width: 100%;
-            height: 100%;
-            background: #f8fafc;
-            border-radius: 18px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .slide {
-            display: none;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .slide.active {
-            display: block;
-        }
-        
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 18px;
-        }
-        
-        .slideshow-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-        }
-        
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .dot.active {
-            background: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* App Process Section */
-        .app-process {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .process-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 60px;
-            color: #1E293B;
-        }
-        
-        .process-steps {
-            display: flex;
-            gap: 60px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .process-step {
-            text-align: center;
-            max-width: 240px;
-            position: relative;
-        }
-        
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: #E91E63;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            margin: 0 auto 20px auto;
-        }
-        
-        .step-phone {
-            width: 120px;
-            height: 240px;
-            background: #000000;
-            border-radius: 15px;
-            padding: 4px;
-            margin: 0 auto 20px auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .step-screen {
-            width: 100%;
-            height: 100%;
-            background: #f8fafc;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .step-screen img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-        
-        .step-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1E293B;
-        }
-        
-        .step-description {
-            color: #64748B;
-            font-size: 14px;
-        }
-        
         /* CTA Section */
         .cta {
-            padding: 80px 0;
-            background: #1E293B;
+            padding: 0;
+            background: #374151;
             color: white;
             text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 120px; /* Space for footer */
         }
         
         .cta-app-icon {
@@ -275,9 +67,13 @@
         /* Footer */
         footer {
             padding: 40px 0;
-            background: #0F172A;
+            background: #1F2937;
             color: white;
             text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
         
         footer a {
@@ -292,93 +88,18 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
+            .cta h2 {
+                font-size: 28px;
             }
             
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .hero-content {
-                flex-direction: column;
-            }
-            
-            .process-steps {
-                flex-direction: column;
-                align-items: center;
-                gap: 40px;
+            .cta p {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <div class="logo-icon"></div>
-                    Floral AI
-                </a>
-            </nav>
-        </div>
-    </header>
-
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>AI-Powered Flower Arrangements</h1>
-                        <p>Create beautiful arrangements without manually typing prompts or dealing with complex AI tools</p>
-                        <a href="https://apps.apple.com/app/floral-ai" class="hero-download">
-                            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="app-process">
-            <div class="container">
-                <h2 class="process-title">How It Works</h2>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-phone">
-                            <div class="step-screen">
-                                <img src="screenshots/create.png" alt="Choose flowers screen">
-                            </div>
-                        </div>
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Choose Flowers</h3>
-                        <p class="step-description">Create and design arrangements fast & easy</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-phone">
-                            <div class="step-screen">
-                                <img src="screenshots/result.png" alt="Generated arrangement result">
-                            </div>
-                        </div>
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">View Result</h3>
-                        <p class="step-description">Draft beautiful arrangement images with AI</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-phone">
-                            <div class="step-screen">
-                                <img src="screenshots/arrangements.png" alt="Saved arrangements gallery">
-                            </div>
-                        </div>
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Save Arrangements</h3>
-                        <p class="step-description">Reuse and manage your arrangements</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="download" class="cta">
             <div class="container">
                 <div class="cta-app-icon"></div>
@@ -395,42 +116,8 @@
     <footer>
         <div class="container">
             <a href="privacy-policy.html">Privacy Policy</a>
-            <p style="margin-top: 20px; color: #64748B;">&copy; 2024 Floral AI</p>
+            <p style="margin-top: 20px; color: #64748B;">&copy; 2025 Floral AI</p>
         </div>
     </footer>
-
-    <script>
-        let slideIndex = 1;
-        showSlide(slideIndex);
-
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
-
-        function showSlide(n) {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
-            }
-            
-            slides[slideIndex-1].classList.add("active");
-            dots[slideIndex-1].classList.add("active");
-        }
-
-        // Auto-advance slides every 4 seconds
-        setInterval(function() {
-            slideIndex++;
-            showSlide(slideIndex);
-        }, 4000);
-    </script>
 </body>
 </html> 
